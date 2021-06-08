@@ -27,7 +27,7 @@ function leapYear(year){
 
 
 
-let a = dayOfYear( 1999, 3, 1)
+let a = dayOfYear( 2020, 3, 1)
 
 console.log("Danas je " + a + ". dan u godini.")
 
