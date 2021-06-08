@@ -1,4 +1,6 @@
-const { expect } = require ('chai');
+var assert = require('assert');
+var chai = require("chai");
+var expect = chai.expect;
 const dayOfYear = require('../dayOfYear.js');
 
 describe('function that gives numbers of they since the start of assigned year()', function () {
@@ -21,8 +23,8 @@ describe('function that gives numbers of they since the start of assigned year()
       expect(() => dayOfYear(2021, 1, 40)).to.throw();   
     });*/
   });
-  it("should return 'error - invalid date'", () => {
-    expect(dayOfYear(1601, 2, 29)).to.equal('error - invalid date')
+  it("should throw error if date is invalid'", () => {
+    expect(dayOfYear(2021, 2, 29)).to.equal('error - invalid date')
   });
   it('should return 1 if 01.01.2021', function () {
     expect(dayOfYear(2021, 1, 1)).to.be.equal(1);
