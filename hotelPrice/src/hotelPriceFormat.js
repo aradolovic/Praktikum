@@ -7,7 +7,7 @@ let data = [
     {from: "2020-02-02",
      to: "2020-03-01",
     price: 37.0
-},
+    },
 
     {from: "2020-03-02",
      to: "2020-05-15",
@@ -25,7 +25,6 @@ function priceListFormatter(pricelist) {
     
     if( !(pricelist instanceof Object) ) throw Error()
 
-    // stvara se novo polje samo s cijenama
     let reducedPrice = pricelist.reduce( (accumulator, currentValue) => {
         if( !accumulator[currentValue.price] ){
             accumulator[currentValue.price] = []
@@ -47,4 +46,4 @@ function priceListFormatter(pricelist) {
 
 console.log(priceListFormatter(data))
 
-module.exports = {priceListFromatter: priceListFormatter, data}
+module.exports = {priceListFormatter, data}
