@@ -18,6 +18,14 @@ const {Double , SquareNb,isEven, getCar
 
         expect(square).to.eql([1,4,9,16,2500,10201])
     })
+
+    it("should return values from euro to kuna", function(){
+
+      let array = [10, 15 , 399 , 1000]
+      const eurotokuna = array.map(x => x * 7.5)
+
+      expect(eurotokuna).to.eql([75, 112.5 , 2992.5, 7500])
+    })
     it("should return true if a number is even", function () {
         let array = [1, 2, 3, 4, 50];
         let evenarray = array.map(isEven);
