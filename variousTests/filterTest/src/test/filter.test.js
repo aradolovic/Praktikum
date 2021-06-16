@@ -9,16 +9,7 @@ let players = [
     {name : "Kylian" ,     surname : "Mbappe",     club : "PSG" , age: 22, height : 181 },
 
 ];
-
-
-
-
-
 describe("filter tests", function(){
-
-
-
-    
     
       it("should determine which club does the player plays in", function () {
         
@@ -47,6 +38,25 @@ describe("filter tests", function(){
     
         }  
         )
+
+    it("should return heroes to their universe", function(){
+
+        let heroes = [
+            {name: "Flash" ,  universe: "DC"},
+            {name: "Spiderman", universe: "Marvel"},
+            {name: "Dr. Strange", universe: "Marvel"},
+            {name: "Batman", universe: "DC"}
+        ]
+        
+        const marvelHeroes = heroes.filter((heroes) => heroes.universe === "Marvel");
+        const DCHeroes = heroes.filter((heroes) => heroes.universe === "DC");
+
+        expect(marvelHeroes).to.eql([{name: "Spiderman", universe: "Marvel"},
+                                    {name: "Dr. Strange", universe: "Marvel"}])
+        
+        expect(DCHeroes).to.eql([{name: "Flash" ,  universe: "DC"},
+                                 {name: "Batman", universe: "DC"}     ])   
+                        })
 
 
 
